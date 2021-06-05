@@ -1,0 +1,70 @@
+/*
+    CIT 281 Project 2
+    Name: Sam Gfroerer
+*/
+
+// Returns a random number between min (inclusive) and max (exclusive)
+const getRandomInteger = function (min,max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+const getRandomLetter = function () {
+    let letters = "abcdefghijklmnopqrstuvwxyz";
+    return letters[Math.floor(Math.random() * letters.length)]
+}
+
+// returns the random length string of the random letter
+const getRandomString = function (minLength, maxLength) {
+    minLength = 10;
+    maxLength = 20;
+    let stringletter = "";
+    const letterChosen = getRandomLetter();
+    let letterrepeat = letterChosen;
+
+for (let i = 0; i < getRandomInteger(minLength, maxLength); i++) {
+    stringletter += letterrepeat;
+}
+return stringletter;
+};
+
+console.log(getRandomString());
+
+//returns a string in ascending order (i.e., xpacd would return acdpx)
+const getSortedString = function (string){ return string.split("").sort().join("");}
+    
+console.log(getSortedString("xpacd"));/*
+    CIT 281 Project 2
+    Name: Sam Gfroerer
+*/
+
+// Returns a random number between min (inclusive) and max (exclusive)
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+function getRandomLetter(){
+    let letters = "abcdefghijklmnopqrstuvwxyz";
+    return letters[Math.floor(Math.random() * letters.length)]
+}
+
+// returns the random length string of the random letter
+function getRandomString(minLength, maxLength) {
+    minLength = 10;
+    maxLength = 20;
+    let stringletter = "";
+    const letterChosen = getRandomLetter();
+    let letterrepeat = letterChosen;
+
+for (let i = 0; i < getRandomInteger(minLength, maxLength); i++) {
+    stringletter += letterrepeat;
+}
+return stringletter;
+};
+
+console.log(getRandomString());
+
+//returns a string in ascending order (i.e., xpacd would return acdpx)
+function getSortedString(string){
+    return string.split("").sort().join("");
+}
+console.log(getSortedString("xpacd"));
